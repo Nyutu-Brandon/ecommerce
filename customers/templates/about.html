@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>This is about page</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquam amet assumenda atque deleniti deserunt ducimus ea eligendi esse excepturi facere hic incidunt inventore ipsum labore laudantium, magni maiores molestiae non obcaecati officiis optio perferendis possimus quaerat quisquam sed sit tempore temporibus unde ut veritatis voluptas voluptatum! Deleniti eligendi magnam obcaecati sit voluptatum. Alias facilis incidunt rem similique ullam?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem beatae deleniti ducimus expedita nobis nostrum numquam odio officia, reiciendis!</p>
+<div>
+    <form action="" method="POST" style="width: 20%">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-info">ADD CUSTOMER</button>
+    </form>
+</div>
+{% endblock%}

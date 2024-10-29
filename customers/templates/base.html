@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css'%}">
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+      <a href="" class="navbar-brand">Jumia</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="">About</a></li>
+               <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Gallery</a></li>
+               <li class="nav-item"><a class="nav-link" href="">Sign Up</a></li>
+
+            </ul>
+            <form action="" class="d-flex">
+                <input type="text" class="form-control me-2"
+                       placeholder="Search here...">
+                <button class="btn btn-info" type="button">Search</button>
+            </form>
+        </div>
+
+
+    </div>
+
+  </nav>
+
+</div>
+{% block content %}
+
+{% endblock %}
+<footer>
+    <div class="mt-4 p-5 bg-dark text-white rounded">
+<h1>Jumbotron Example</h1>
+<p>Lorem ipsum...</p>
+</div>
+</footer>
+
+</body>
+</html>

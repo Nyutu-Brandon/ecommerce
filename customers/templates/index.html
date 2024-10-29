@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table table-primary table-striped" style="margin-top: 50px;margin-bottom: 50px">
+  <thead>
+  <tr>
+    <th>NAME</th>
+    <th>EMAIL</th>
+    <th>GENDER</th>
+    <th>AGE</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for x in data%}
+  <tr>
+    <td>{{ x.name }}</td>
+    <td>{{ x.email }}</td>
+    <td>{{ x.gender }}</td>
+    <td>{{ x.age }}</td>
+    <td>
+      <a href="{% url 'delete_customer' x.id %}" class="btn btn-danger" type="button"
+         onclick="return confirm('Are you sure you want to delete this customer?');">DELETE</a>
+
+    </td>
+    <td><a href="{% url 'edit_customer' x.id %}" class="btn btn-success" type="button">UPDATE</a></td>
+  </tr>
+  {% endfor %}
+
+
+  </tbody>
+</table>
+<h2 style="color: black">Our facilities</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores aspernatur commodi consectetur consequatur culpa debitis dignissimos eius facere in ipsam, maiores minus modi necessitatibus quisquam similique temporibus totam vitae. Facilis, non sit. Aliquam amet aspernatur at cumque debitis delectus dignissimos dolore dolorem harum id, itaque laboriosam libero magnam maxime minima nesciunt non numquam perferendis quidem recusandae reiciendis similique sit?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid, blanditiis eaque esse ex illo itaque modi molestiae molestias obcaecati perferendis qui similique sint sunt, ullam vitae voluptates? Ab accusamus, animi architecto commodi consequatur culpa dolor, dolorum ducimus esse exercitationem fuga fugiat fugit harum impedit incidunt ipsam molestias natus omnis porro praesentium quaerat quisquam quos repellat sed, ullam veritatis voluptates?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum molestias nemo neque. Eius, in, sint. A amet aspernatur autem beatae distinctio doloribus, ducimus ea libero maiores minima, nobis odio quasi, quis! Consequuntur corporis, cupiditate dolore eligendi fuga illo maxime nemo temporibus veritatis. Autem ea ipsam molestias, perferendis porro quaerat quibusdam! Enim illo incidunt iusto natus porro quam rem, voluptatem!</p>
+
+{% endblock %}
